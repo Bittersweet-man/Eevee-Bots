@@ -16,7 +16,11 @@ class AnnouncementsCommand extends Commando.Command {
             message.member.addRole('511266254615740437')
             message.reply('You have recieved the announcements role, and will be notified of new announcements!')
         }
+        else
+        {
+            message.channel.send('That command isn\'t available here!'')
+        }
     }
 };
 
-module.exports = AnnouncementsCommand;
+module.exports = AnnouncementsCommand
