@@ -26,8 +26,8 @@ bot.on('ready', () => {
     console.log("Ready");
     const channel = bot.channels.get('500380461391020042')
     channel.send("I am online!")
-    bot.user.setActivity("Type /help", {
-        type: 'WATCHING'
+    bot.user.setActivity("Type ?help", {
+        type: 'PLAYING'
     })
 });
 

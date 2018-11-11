@@ -16,6 +16,7 @@ class AnnouncementsCommand extends Commando.Command
     async run(message, args)
     {
         if(message.guild.id == 465707591910162432){
+            let guild = 465707591910162432
             let announcementRole = guild.roles.find("name", "announcements");
         message.author.addRole(announcementRole);
         message.reply('You have recaived the announcements role!');
