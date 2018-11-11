@@ -10,7 +10,6 @@ const discord = require('discord.js');
 const Enmap = require("enmap");
 const myEnmap = new Enmap();​
 
-
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
 bot.registry.registerGroup('admin', 'Admin');
