@@ -62,7 +62,7 @@ bot.on("guildMemberAdd", function (member) {
 bot.on('message', function (message) {
     if (message.content.includes('die')) {
         message.channel.send('please dont')
-        message.channel.send(guild.id)
+        message.channel.send(message.guild.id)
     }
 
 
