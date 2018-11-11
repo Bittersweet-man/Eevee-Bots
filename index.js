@@ -41,7 +41,7 @@ bot.on("guildMemberAdd", function (member) {
             .addField("New Member", "New member " + member + " has joined! Give then a warm welcome!", true)
             .setDescription("You're user 3274732")
             .setColor('RANDOM')
-            .setThumbnail(member.avatarURL)
+            .setThumbnail('member.avatarURL')
             .setFooter("Welcome to the server!")
 
         channel.send(welcome);
