@@ -7,13 +7,12 @@ const bot = new Commando.Client({
 })
 const ytdl = require('ytdl-core');
 const discord = require('discord.js');
-const eco = require('discord-economy');
 
 
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
 bot.registry.registerGroup('admin', 'Admin');
-bot.registry.registerGroup('economy', 'Economy');
+
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + '/commands');
 
