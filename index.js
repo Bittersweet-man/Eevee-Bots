@@ -47,17 +47,6 @@ bot.on("guildMemberAdd", function (member) {
 
 
 bot.on('message', function (message) {
-    if (message.content == commandPrefix + 'hello') {
-        message.channel.send('Hello ' + message.author + ', how are you?');
-    }
-    if (message.content == "Join") {
-        message.member.send("Welcome to the server!");
-        let memberRole = message.member.guild.roles.find("name", "Newcomer");
-        message.member.addRole(memberRole);
-        var channel = bot.channels.get('500450322347589632')
-        channel.send(message.author + ", Hello! Welcome to Sylveon Land, here we meme the crap out of our existence! Read #welcome-rules before typing away!")
-    }
-
     if (message.content.includes('die')) {
         message.channel.send('please dont')
     }
