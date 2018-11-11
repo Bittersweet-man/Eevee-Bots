@@ -47,6 +47,7 @@ bot.on("guildMemberAdd", function (member) {
 
         channel.send(welcome);
         console.log(thumbnail)
+        console.log(member)
     }
     if (member.guild.id == 510974262769614918) {
         var channel = bot.channels.get('510974262769614921')
