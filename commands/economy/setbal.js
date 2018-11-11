@@ -1,4 +1,5 @@
 const Commando = require('discord.js-commando');
+const eco = require('discord-economy');
 
 class SetbalCommand extends Commando.Command {
     constructor(client, ) {
