@@ -18,7 +18,7 @@ class AnnouncementsCommand extends Commando.Command {
         }
         else
         {
-            message.channel.send('That command isn\'t available here!'')
+            message.channel.send('That command isn\'t available here!')
         }
     }
 };
