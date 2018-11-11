@@ -36,7 +36,6 @@ bot.on("guildMemberAdd", function (member) {
     member.addRole(memberRole);
     var channel = bot.channels.get('500450322347589632')
     message.channel.send(member + ", Hello! Welcome to Sylveon land, here we meme the crap out of our existence! Read " + bot.channels.get('473670157948944384') + " before typing away!")
-
 });
 
 
