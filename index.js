@@ -1,11 +1,14 @@
 const Commando = require('discord.js-commando');
 const TOKEN = process.env.TOKEN;
-const commandPrefix = '?'
-const bot = new Commando.Client({commandPrefix: "/", owner: "462709446121095169", owner: "413754421365964800"})
+const bot = new Commando.Client({
+    commandPrefix: "/",
+    owner: "462709446121095169",
+    owner: "413754421365964800"
+})
 const ytdl = require('ytdl-core');
-
-var prefix = commandPrefix
 const discord = require('discord.js');
+const Enmap = require("enmap");
+const myEnmap = new Enmap();​
 
 
 bot.registry.registerGroup('simple', 'Simple');
@@ -30,7 +33,7 @@ bot.on('ready', () => {
     })
 });
 
-bot.on("guildMemberAdd", function(member) {
+bot.on("guildMemberAdd", function (member) {
     member.send("Hello! Welcome to sylveon land, here we meme the crap out of our existence! Read #welcome-rules before typing away!");
     let memberRole = member.guild.roles.find("name", "Newcomer");
     member.addRole(memberRole);
@@ -82,14 +85,16 @@ bot.on('message', function (message) {
     if (message.content.includes('Joshler')) {
         message.react('🤢')
     }
-    if (message.content == 'shut up'){
+    if (message.content == 'shut up') {
         message.channel.send("no")
     }
-    if (message.content == 'welcome channel'){
-    message.channel.send(welcomeChannel)
+    if (message.content == 'welcome channel') {
+        message.channel.send(welcomeChannel)
     }
-    if(message.content == 'queue'){
-        message.channel.send(playQueue)
+    if (message.content == 'database') {
+        myEnmap.set('integer', 34);
+        const test = myEnmap.get('integer');
+        message.channel.send(test)
     }
 
 })
