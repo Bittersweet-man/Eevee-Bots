@@ -36,7 +36,7 @@ bot.on("guildMemberAdd", function (member) {
         let memberRole = member.guild.roles.find("name", "Newcomer");
         member.addRole(memberRole);
         var channel = bot.channels.get('500450322347589632')
-        var thumbnail = member.avatarURL
+        var thumbnail = member.id.avatarURL
         var welcome = new discord.RichEmbed()
             .setTitle("Welcome!")
             .addField("New Member", "New member " + member + " has joined! Give then a warm welcome!", true)
@@ -46,8 +46,6 @@ bot.on("guildMemberAdd", function (member) {
             .setFooter("Welcome to the server!")
 
         channel.send(welcome);
-        console.log(thumbnail)
-        console.log(member.id)
     }
     if (member.guild.id == 510974262769614918) {
         var channel = bot.channels.get('510974262769614921')
