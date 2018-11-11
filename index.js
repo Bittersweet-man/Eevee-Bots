@@ -62,6 +62,7 @@ bot.on("guildMemberAdd", function (member) {
 bot.on('message', function (message) {
     if (message.content.includes('die')) {
         message.channel.send('please dont')
+        console.log(message.author)
     }
 
 
