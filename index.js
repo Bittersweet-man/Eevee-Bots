@@ -7,8 +7,6 @@ const bot = new Commando.Client({
 })
 const ytdl = require('ytdl-core');
 const discord = require('discord.js');
-const Enmap = require("enmap");
-const myEnmap = new Enmap();​
 
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
