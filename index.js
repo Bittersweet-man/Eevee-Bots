@@ -36,6 +36,7 @@ bot.on("guildMemberAdd", function (member) {
         let memberRole = member.guild.roles.find("name", "Newcomer");
         member.addRole(memberRole);
         var channel = bot.channels.get('500450322347589632')
+        var guild = 465707591910162432
         var thumbnail = member.id.avatarURL
         var welcome = new discord.RichEmbed()
             .setTitle("Welcome!")
