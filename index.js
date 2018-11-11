@@ -39,6 +39,10 @@ bot.on("guildMemberAdd", function (member) {
         var channel = bot.channels.get('500450322347589632')
         channel.send(member + ", Hello! Welcome to Sylveon land, here we meme the crap out of our existence! Read " + bot.channels.get('473670157948944384') + " before typing away!")
     }
+    if(member.guild.id = 510974262769614918){
+        var channel = bot.channels.get('510974262769614921')
+        channel.send('someone joined kk')
+    }
 
 });
 
