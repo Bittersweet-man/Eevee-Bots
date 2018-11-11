@@ -44,7 +44,7 @@ bot.on("guildMemberAdd", function (member) {
             .setThumbnail(member.avatarURL)
             .setFooter("Welcome to the server!")
 
-        message.channel.send(welcome);
+        channel.send(welcome);
     }
     if (member.guild.id == 510974262769614918) {
         var channel = bot.channels.get('510974262769614921')
