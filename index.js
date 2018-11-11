@@ -36,9 +36,17 @@ bot.on("guildMemberAdd", function (member) {
         let memberRole = member.guild.roles.find("name", "Newcomer");
         member.addRole(memberRole);
         var channel = bot.channels.get('500450322347589632')
-        channel.send(member + ", Hello! Welcome to Sylveon land, here we meme the crap out of our existence! Read " + bot.channels.get('473670157948944384') + " before typing away!")
+        var welcome = new discord.RichEmbed()
+            .setTitle("Welcome!")
+            .addField("New Member", "New member " + member + " has joined! Give then a warm welcome!", true)
+            .setDescription("You're user 3274732")
+            .setColor('RANDOM')
+            .setThumbnail(membe.avatarURL)
+            .setFooter("Welcome to the server!")
+
+        message.channel.send(welcome);
     }
-    if(member.guild.id == 510974262769614918){
+    if (member.guild.id == 510974262769614918) {
         var channel = bot.channels.get('510974262769614921')
         channel.send('someone joined kk')
     }
