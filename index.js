@@ -7,6 +7,11 @@ const bot = new Commando.Client({
 })
 const ytdl = require('ytdl-core');
 const discord = require('discord.js');
+var quickdb = require('quickdb');
+
+var basicCallback = (response) => {
+    console.log(response);
+};
 
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
@@ -89,9 +94,16 @@ bot.on('message', function (message) {
         message.channel.send(welcomeChannel)
     }
     if (message.content == 'database') {
-        myEnmap.set('integer', 34);
-        const test = myEnmap.get('integer');
-        message.channel.send(test)
-    }
+        var item_to_insert = {
+            name: "Woopty woop!"
+        };
+        quickdb.doc.insert("newSetName", "newDocName", item_to_insert, basicCallback);
 
+
+        var searchFunc = (val) => {
+            return val.item.name = "Woopty woop!";
+        };
+
+        quickdb.doc.find("newSetName", "newDocName", searchFunc, basicCallback);
+    }
 })
