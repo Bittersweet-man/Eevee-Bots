@@ -14,7 +14,7 @@ class AnnouncementsCommand extends Commando.Command {
     async run(message, args) {
         if (message.guild.id == 465707591910162432) {
             message.member.addRole('511266254615740437')
-            message.reply('You have recieved the announcements role, and will be notified of nre announcements!')
+            message.reply('You have recieved the announcements role, and will be notified of new announcements!')
         }
     }
 };
