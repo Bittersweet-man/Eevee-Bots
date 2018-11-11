@@ -13,7 +13,7 @@ class AnnouncementsCommand extends Commando.Command {
 
     async run(message, args) {
         if (message.guild.id == 465707591910162432) {
-            message.member.addrole('511266254615740437')
+            message.member.addRole('511266254615740437')
             message.reply('yeet')
         }
     }
