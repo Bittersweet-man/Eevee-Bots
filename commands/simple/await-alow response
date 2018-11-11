@@ -1,0 +1,4 @@
+const msgs = await message.channel.awaitMessages(msg => { 
+    console.log(msg.content) ;
+    return msg.content;
+}, {time: 5000});
