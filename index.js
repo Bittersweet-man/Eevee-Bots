@@ -32,7 +32,7 @@ bot.on('ready', () => {
 });
 
 bot.on("guildMemberAdd", function (member) {
-    if (guild.id = 465707591910162432) {
+    if (member.guild.id = 465707591910162432) {
         member.send("Hello! Welcome to sylveon land, here we meme the crap out of our existence! Read #welcome-rules before typing away!");
         let memberRole = member.guild.roles.find("name", "Newcomer");
         member.addRole(memberRole);
