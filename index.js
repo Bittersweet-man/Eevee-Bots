@@ -41,7 +41,7 @@ bot.on("guildMemberAdd", function (member) {
         var welcome = new discord.RichEmbed()
             .setTitle("Welcome!")
             .addField("New Member", "New member " + member + " has joined! Give then a warm welcome!", true)
-            .setDescription("You're user " + guild.memberCount)
+            .setDescription("You're user " + guild.id.memberCount)
             .setColor('RANDOM')
             .setThumbnail(member.avatarURL)
             .setFooter("Welcome to the server!")
