@@ -69,7 +69,6 @@ bot.on("guildMemberRemove", function (member) {
 bot.on('message', function (message) {
     if(message.content = "?accept"){
         message.reply('You have been accepted to the Sylveon Squad!')
-        let memberRole = message.author.guild.roles.find("name", "Newcomer");
-        message.author.addRole(memberRole);
+        message.member.addRole('473668077754777602')
     }
 })
