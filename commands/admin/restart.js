@@ -18,7 +18,9 @@ class RestartCommand extends Commando.Command {
             message.channel.send("You don't have permissions to use this command!");
             return;
         }
-        bot.destroy()
+        channel.send('Resetting...')
+    .then(msg => bot.destroy())
+    .then(() => bot.login(process.env.TOKEN));
     }
 }
 module.exports = RestartCommand;
