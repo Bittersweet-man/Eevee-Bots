@@ -21,13 +21,6 @@ class SpamsylvCommand extends Commando.Command {
         message.channel.send('<@413754421365964800>')
         message.channel.send('<@413754421365964800>')
         message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
     }
 }
 module.exports = SpamsylvCommand;
