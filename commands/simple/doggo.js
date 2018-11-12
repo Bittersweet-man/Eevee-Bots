@@ -29,6 +29,7 @@ class DoggoCommand extends Commando.Command {
             .setImage(body.message)
             .setTimestamp()
             .setFooter('Sylveon Bot',)
+            .setColor('RANDOM')
             // bot.user.displayAvatarURL
 
         message.channel.send({
