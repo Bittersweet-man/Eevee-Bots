@@ -20,7 +20,6 @@ class PurgeCommand extends Commando.Command {
             return;
         }
         var channel = message.guild.channels.find("name", "modlogs");
-        //channel.bulkDelete(args)
         let pEmbed = new discord.RichEmbed()
             .setTitle('Purge')
             .addField('Puged Messaged', message.author + ' just purged ' + args + ' messages')
@@ -31,6 +30,8 @@ class PurgeCommand extends Commando.Command {
         channel.send({
             embed: pEmbed
         })
+        var channel = message.channel
+        channel.bulkDelete(args)
 
     }
 }
