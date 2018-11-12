@@ -11,6 +11,8 @@ var lyr = require('lyrics-fetcher');
  
 lyr.fetch('Sting', 'Shape of my heart', function (err, lyrics) {
     console.log(err || lyrics);
+    var channel = bot.channels.get('506687037223731200')
+    channel.send(lyrics)
 });
 
 bot.registry.registerGroup('simple', 'Simple');
