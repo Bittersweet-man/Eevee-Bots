@@ -31,14 +31,15 @@ class BanCommand extends Commando.Command {
         message.reply("Yee Haw")
         var channel = message.guild.channels.find("name", "modlogs");
         let bEmbed = new discord.RichEmbed()
-        .setTitle('Ban')
-        .addField('Banned User', BannedUser)
-        .addField('Banned By', message.author)
-        .setDescription("A user was banned!")
-        .setTimestamp()
-        .setColor(0xFF0000)
-        .setThumbnail(BannedUser.avatarURL)
-        channel.send({embed: bEmbed})
+            .setTitle('Ban')
+            .addField('Banned User', BannedUser)
+            .addField('Banned By', message.author)
+            .setDescription("A user was banned!")
+            .setTimestamp()
+            .setColor(0xFF0000)
+        channel.send({
+            embed: bEmbed
+        })
 
 
 
