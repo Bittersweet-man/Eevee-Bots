@@ -56,12 +56,14 @@ bot.on("guildMemberAdd", function (member) {
 });
 
 bot.on("guildMemberRemove", function (member) {
-    if (member.guild.id == 465707591910162432) {
-        var channel = bot.channels.get('500450322347589632')
-        var guild = 465707591910162432
-        channel.send('I\'m sorry that ' + member + " has left us. oof.")
+        if (member.guild.id == 465707591910162432) {
+            var channel = bot.channels.get('500450322347589632')
+            var guild = 465707591910162432
+            channel.send('I\'m sorry that ' + member + " has left us. oof.")
+        }
+    }
 
-
+);
 
 bot.on('message', function (message) {
     if (message.content.includes('die')) {
