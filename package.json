@@ -8,6 +8,7 @@
     "discord.js-commando": "^0.10.0",
     "enmap": "^4.3.3",
     "ffmpeg-binaries": "^4.0.0",
+    "lyrics-fetcher": "^1.0.2",
     "mysql": "^2.16.0",
     "node": "^10.12.0",
     "npm": "^6.4.1",
