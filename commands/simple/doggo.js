@@ -30,12 +30,12 @@ class DoggoCommand extends Commando.Command {
             .setTimestamp()
             .setFooter('Sylveon Bot')
             .setColor('RANDOM')
-            // bot.user.displayAvatarURL
+        // bot.user.displayAvatarURL
 
+        message.delete();
         message.channel.send({
             embed: dEmbed
         })
-        message.delete();
 
     }
 }
