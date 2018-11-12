@@ -17,7 +17,7 @@ class CreateCommand extends Commando.Command {
             message.channel.send("You don't have permissions to use this command!");
             return;
         }
-        message.author.guild.createChannel(name, args)
+        message.author.guild.createChannel(args, 'text')
     }
 }
 module.exports = CreateCommand;
