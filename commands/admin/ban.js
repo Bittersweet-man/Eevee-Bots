@@ -30,7 +30,7 @@ class BanCommand extends Commando.Command {
         message.guild.member(BannedUser).ban(reason)
         message.reply("Yee Haw")
         var channel = message.guild.channels.find("name", "modlogs");
-        channel.send("A user was just banned! KBanned User " + BannedUser + " Banned By " + message.author)
+        channel.send("A user was just banned! Banned User " + BannedUser + " Banned By " + message.author)
 
 
 
