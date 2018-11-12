@@ -26,7 +26,16 @@ class WarnCommand extends Commando.Command {
             return;
         }
         var channel = message.guild.channels.find("name", "modlogs");
-        channel.send("A user was just warned! Warned User " + warnedUser + " warned By " + message.author)
+        let wEmbed = new discord.RichEmbed()
+        .setTitle('Warn')
+        .addField('Warned User', warnedUser)
+        .addField('Warned By', message.author)
+        .setDescription("A user was warned!")
+        .setTimestamp()
+        .setColor(0xFFFF00)
+    channel.send({
+        embed: wEmbed
+    })
 
 
 
