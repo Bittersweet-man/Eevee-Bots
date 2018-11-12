@@ -19,8 +19,8 @@ class LyricsCommand extends Commando.Command {
 
             }
             if (lyrics.length > 2000) {
-                lyrics = lyrics.substring(0, 1000);
-                let words = lyrics.split(1000);
+               var lyrics1 = lyrics.substring(0, 2000);
+                let words = lyrics1.split(2000);
                 message.channel.send('```' + words + '```')
             } {
                 if (lyrics.length < 2000) {
@@ -28,8 +28,8 @@ class LyricsCommand extends Commando.Command {
                 }
             } {
                 if (lyrics.length > 2000) {
-                    lyrics = lyrics.slice(-1000);
-                    message.channel.send('```' + lyrics + '```')
+                  var lyrics2 = lyrics.slice(-1000);
+                    message.channel.send('```' + lyrics2 + '```')
 
                 }
             }
