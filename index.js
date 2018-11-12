@@ -72,6 +72,6 @@ bot.on('message', function (message) {
         message.member.addRole('473668077754777602')
     }
     if (message.content == "test") {
-        message.channel.send('test complete')
+        message.channel.send('test incomplete')
     }
 })
