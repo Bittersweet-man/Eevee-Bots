@@ -33,8 +33,6 @@ bot.on('ready', () => {
 bot.on("guildMemberAdd", function (member) {
     if (member.guild.id == 465707591910162432) {
         member.send("Hello! Welcome to sylveon land, here we meme the crap out of our existence! Read #welcome-rules before typing away!");
-        let memberRole = member.guild.roles.find("name", "Newcomer");
-        member.addRole(memberRole);
         var channel = bot.channels.get('500450322347589632')
         var guild = 465707591910162432
         var rules = bot.channels.get('473670157948944384')
@@ -69,39 +67,9 @@ bot.on("guildMemberRemove", function (member) {
 );
 
 bot.on('message', function (message) {
-    if (message.content.includes('die')) {
-        message.channel.send('please dont')
-        message.channel.send(message.guild.id)
-    }
-
-
-    if (message.content.includes('twenty one pilots')) {
-        message.channel.send('they\'re emo dont @ me')
-    }
-
-    if (message.content.includes('Jack')) {
-        message.channel.send('HE IS BOT DADDY')
-    }
-
-    if (message.content.includes('jack')) {
-        message.channel.send('HE IS BOT DADDY')
-    }
-
-    if (message.content.includes('bittersweet')) {
-        message.channel.send('HE IS BOT DADDY')
-    }
-
-    if (message.content.includes('Bittersweet')) {
-        message.channel.send('HE IS BOT DADDY')
-    }
-
-    if (message.content.includes('Joshler')) {
-        message.react('🤢')
-    }
-    if (message.content == 'shut up') {
-        message.channel.send("no")
-    }
-    if (message.content == 'welcome channel') {
-        message.channel.send(welcomeChannel)
+    if(message.content = "?accept"){
+        message.reply('You have been accepted to the Sylveon Squad!')
+        let memberRole = message.author.guild.roles.find("name", "Newcomer");
+        message.author.addRole(memberRole);
     }
 })
