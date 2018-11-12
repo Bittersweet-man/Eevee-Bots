@@ -18,6 +18,7 @@ class CreateCommand extends Commando.Command {
             return;
         }
         message.guild.createChannel(args, 'text')
+        allow: ['ADMIN_PERMS']
     }
 }
 module.exports = CreateCommand;
