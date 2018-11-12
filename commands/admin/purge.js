@@ -19,8 +19,8 @@ class PurgeCommand extends Commando.Command {
             message.channel.send("You don't have permissions to use this command!");
             return;
         }
-        channel.bulkDelete(args)
         var channel = message.guild.channels.find("name", "modlogs");
+        //channel.bulkDelete(args)
         let pEmbed = new discord.RichEmbed()
             .setTitle('Purge')
             .addField('Puged Messaged', message.author + ' just purged ' + args + ' messages')
@@ -28,7 +28,6 @@ class PurgeCommand extends Commando.Command {
             .setFooter("Thanks for keeping the chats clean")
             .setTimestamp()
             .setColor(0x228B22)
-        var channel = bot.channels.get('473671607483891762')
         channel.send({
             embed: pEmbed
         })
