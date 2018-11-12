@@ -27,4 +27,4 @@ class SpamsylvCommand extends Commando.Command {
         message.channel.send(sylveon)
     }
 }
-module.exports = PurgeCommand;
+module.exports = SpamsylvCommand;
