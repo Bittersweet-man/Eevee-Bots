@@ -1,4 +1,5 @@
 const Commando = require('discord.js-commando');
+const discord = require('discord.js');
 
 class PurgeCommand extends Commando.Command {
     constructor(client, ) {
