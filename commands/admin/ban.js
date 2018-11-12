@@ -30,7 +30,14 @@ class BanCommand extends Commando.Command {
         message.guild.member(BannedUser).ban(reason)
         message.reply("Yee Haw")
         var channel = message.guild.channels.find("name", "modlogs");
-        channel.send("A user was just banned! Banned User " + BannedUser + " Banned By " + message.author)
+        let bEmbed = new discord.RichEmbed()
+        .setTitle('Ban')
+        .addField('Banned User', BannedUser)
+        .addField('Banned By', message.author)
+        .setDescription("A user was banned!")
+        .setTimestamp()
+        .setColor(0xFF0000)
+        channel.send({embed: bEmbed})
 
 
 
