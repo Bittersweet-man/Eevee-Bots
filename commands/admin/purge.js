@@ -28,6 +28,7 @@ class PurgeCommand extends Commando.Command {
         channel.send({
             embed: pEmbed
         })
+        console.log(pEmbed)
         channel.send('test')
 
     }
