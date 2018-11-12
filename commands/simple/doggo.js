@@ -1,5 +1,7 @@
 const Commando = require('discord.js-commando');
 const superagent = require('superagent');
+const discord = require('discord.js');
+const bot = new Commando.Client()
 
 class DoggoCommand extends Commando.Command {
     constructor(client, ) {
@@ -22,7 +24,17 @@ class DoggoCommand extends Commando.Command {
         if (!{
                 body
             }) return message.channel.send('I broke! Please try again!')
-        message.channel.send(body.message)
+        var dEmbed = new discord.RichEmbed()
+            .setcolor('RANDOM')
+            .setAuthor('Sylveon Bot', message.guild.iconURL)
+            .setImage(body.message)
+            .setTimestamp()
+            .setFooter('Sylveon Bot', bot.user.displayAvatarURL)
+
+        message.channel.send({
+            embed: dEmbed
+        })
+        message.delete();
 
     }
 }
