@@ -25,7 +25,7 @@ class DoggoCommand extends Commando.Command {
                 body
             }) return message.channel.send('I broke! Please try again!')
         var dEmbed = new discord.RichEmbed()
-            .setcolor('RANDOM')
+            .setcolor(0xFF0000)
             .setAuthor('Sylveon Bot', message.guild.iconURL)
             .setImage(body.message)
             .setTimestamp()
