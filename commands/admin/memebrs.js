@@ -17,7 +17,7 @@ class MembersCommand extends Commando.Command {
             message.channel.send("You don't have permissions to use this command!");
             return;
         }
-        message.channel.send(guild.memberCount)
+        message.channel.send(message.guild.memberCount)
     }
 }
 module.exports = MembersCommand;
