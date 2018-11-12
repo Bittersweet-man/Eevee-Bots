@@ -37,6 +37,7 @@ class BanCommand extends Commando.Command {
         .setDescription("A user was banned!")
         .setTimestamp()
         .setColor(0xFF0000)
+        .setThumbnail(BannedUser.avatarURL)
         channel.send({embed: bEmbed})
 
 
