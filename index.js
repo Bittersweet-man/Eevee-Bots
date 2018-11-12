@@ -41,7 +41,7 @@ bot.on("guildMemberAdd", function (member) {
         var welcome = new discord.RichEmbed()
             .setTitle("Welcome!")
             .addField("New Member", "New member " + member + " has joined! Give then a warm welcome!", true)
-            .addField("Rules", "Make sure to read " + rules +  " and do ?accept in" + accept + " to get access to the server!", true)
+            .addField("Rules", "Make sure to read " + rules +  " and do \'accept\' in" + accept + " to get access to the server!", true)
             .setDescription("You're user " + member.guild.memberCount)
             .setColor('RANDOM')
             .setThumbnail(member.avatarURL)
@@ -67,7 +67,7 @@ bot.on("guildMemberRemove", function (member) {
 );
 
 bot.on('message', function (message) {
-    if(message.content == "?accept"){
+    if(message.content == "accept"){
         message.reply('You have been accepted to the Sylveon Squad!')
         message.member.addRole('473668077754777602')
     }
