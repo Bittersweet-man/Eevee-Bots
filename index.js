@@ -10,8 +10,6 @@ const discord = require('discord.js');
 var lyr = require('lyrics-fetcher');
  
 lyr.fetch('Sting', 'Shape of my heart', function (err, lyrics) {
-    var channel = bot.channels.get('506687037223731200')
-    channel.send('loaded')
     console.log(err || lyrics);
 });
 
