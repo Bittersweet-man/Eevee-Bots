@@ -30,7 +30,17 @@ class KickCommand extends Commando.Command {
         message.guild.member(kickedUser).kick(reason)
         message.reply("Yee Haw")
         var channel = message.guild.channels.find("name", "modlogs");
-        channel.send("A user was just kicked! Kicked User " + kickedUser + " Kicked By " + message.author)
+        let kEmbed = new discord.RichEmbed()
+            .setTitle('Kick')
+            .addField('Kicked User', KickedUser)
+            .addField('Kicked By', message.author)
+            .setDescription("A user was Kicked!")
+            .setTimestamp()
+            .setColor(0xFFA500)
+        channel.send({
+            embed: kEmbed
+        })
+
 
 
 
