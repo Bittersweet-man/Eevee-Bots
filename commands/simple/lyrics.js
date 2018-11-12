@@ -16,7 +16,7 @@ class LyricsCommand extends Commando.Command
         
     async run(message, args)
     {
-        lyr.fetch('Legend', function (err, lyrics) {
+        lyr.fetch('twenty one pilots', args, function (err, lyrics) {
             message.channel.send(err || lyrics);
         });
     }
