@@ -23,6 +23,7 @@ class MembersCommand extends Commando.Command {
             .addField("Current Members", message.guild.memberCount, true)
             .setColor('RANDOM')
             .setFooter("woah thats a lot Owo")
+            .setTimestamp()
 
         channel.send(memberCount);
     }

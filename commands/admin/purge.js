@@ -18,6 +18,19 @@ class PurgeCommand extends Commando.Command {
             return;
         }
         channel.bulkDelete(args)
+        let pEmbed = new discord.RichEmbed()
+            .setTitle('Purge')
+            .addField('Puged Messaged', message.author + ' just purged ' + args + ' messages')
+            .addField('Channel', message.channel)
+            .setFooter("Thanks for keeping the chats clean")
+            .setTimestamp()
+            .setColor(0x228B22)
+        
+            var channel = bot.channels.get('473671607483891762')
+        channel.send({
+            embed: pEmbed
+        })
+
     }
 }
 module.exports = PurgeCommand;
