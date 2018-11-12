@@ -39,13 +39,13 @@ bot.on("guildMemberAdd", function (member) {
         var rules = bot.channels.get('473670157948944384')
         var accept = bot.channels.get('511355112652800010')
         var thumbnail = member.id.avatarURL
-        var welcome = new discord.RichEmbed()
+        let welcome = new discord.RichEmbed()
             .setTitle("Welcome!")
             .addField("New Member", "New member " + member + " has joined! Give then a warm welcome!", true)
             .addField("Rules", "Make sure to read " + rules + " and do \'accept\' in" + accept + " to get access to the server!", true)
             .setDescription("You're user " + member.guild.memberCount)
             .setColor('RANDOM')
-            .setThumbnail(member.avatarURL)
+            .setImage(member.avatarURL)
             .setFooter("Welcome to the server!")
 
         channel.send(welcome);
