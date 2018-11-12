@@ -24,8 +24,7 @@ class LyricsCommand extends Commando.Command {
                 let words = lyrics.split(1000);
                 message.channel.send('```' + words + '```')
                 lyrics2 = lyrics2.substring(1000, 2000);
-                let words2 = lyrics2.split(2000)
-                message.channel.send('```' + words2 + '```')
+                message.channel.send('```' + lyrics2 + '```')
                 return;
             } {
                 message.channel.send('```' + lyrics + '```');
