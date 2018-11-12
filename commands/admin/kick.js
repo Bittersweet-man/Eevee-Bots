@@ -16,7 +16,6 @@ class KickCommand extends Commando.Command {
 
     async run(message, args) {
         let kickedUser = message.guild.member(message.mentions.users.first());
-        console.log(kickedUser)
         if (!kickedUser) {
             message.channel.send("Sorry, I cound't find that person");
             return;
@@ -32,7 +31,7 @@ class KickCommand extends Commando.Command {
         var channel = message.guild.channels.find("name", "modlogs");
         let kEmbed = new discord.RichEmbed()
             .setTitle('Kick')
-            .addField('Kicked User', KickedUser)
+            .addField('Kicked User', kickedUser)
             .addField('Kicked By', message.author)
             .setDescription("A user was Kicked!")
             .setTimestamp()

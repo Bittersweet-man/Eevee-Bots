@@ -16,7 +16,6 @@ class BanCommand extends Commando.Command {
 
     async run(message, args) {
         let BannedUser = message.guild.member(message.mentions.users.first());
-        console.log(BannedUser)
         if (!BannedUser) {
             message.channel.send("Sorry, I cound't find that person");
             return;
