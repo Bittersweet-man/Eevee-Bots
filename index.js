@@ -8,10 +8,7 @@ const bot = new Commando.Client({
 const ytdl = require('ytdl-core');
 const discord = require('discord.js');
 var lyr = require('lyrics-fetcher');
- 
-lyr.fetch('Sting', 'Shape of my heart', function (err, lyrics) {
-    console.log(err || lyrics);
-});
+
 
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');

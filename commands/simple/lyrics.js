@@ -19,7 +19,7 @@ class LyricsCommand extends Commando.Command {
                 message.reply("that song is to long!")
                 return;
             } {
-                message.channel.send(err || lyrics);
+                message.channel.send('```' + lyrics + '```');
             }
 
         });
