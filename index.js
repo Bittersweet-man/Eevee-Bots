@@ -72,4 +72,7 @@ bot.on('message', function (message) {
         message.reply('You have been accepted to the Sylveon Squad!')
         message.member.addRole('473668077754777602')
     }
+    if(message.content = 'test'){
+        message.channel.send('test complete ' + message.author.displayName)
+    }
 })
