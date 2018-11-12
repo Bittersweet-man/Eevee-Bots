@@ -1,5 +1,6 @@
 const Commando = require('discord.js-commando');
 const discord = require('discord.js');
+const bot = new Commando.Client()
 
 class PurgeCommand extends Commando.Command {
     constructor(client, ) {
@@ -26,12 +27,11 @@ class PurgeCommand extends Commando.Command {
             .setFooter("Thanks for keeping the chats clean")
             .setTimestamp()
             .setColor(0x228B22)
+            var channel = bot.channels.get('473671607483891762')
         channel.send({
             embed: pEmbed
         })
-        console.log(pEmbed)
-        channel.send('test')
-
+       
     }
 }
 module.exports = PurgeCommand;
