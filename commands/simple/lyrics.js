@@ -20,7 +20,9 @@ class LyricsCommand extends Commando.Command {
             }
             if (lyrics.length > 2000) {
                 lyrics = lyrics.substring(0, 10);
+                let words = lyrics.split(1000);
                 message.reply("that song is to long!")
+                channel.send(words)
                 return;
             } {
                 message.channel.send('```' + lyrics + '```');
