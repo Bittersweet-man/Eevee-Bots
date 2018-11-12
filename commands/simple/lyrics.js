@@ -22,9 +22,9 @@ class LyricsCommand extends Commando.Command {
                 lyrics = lyrics.substring(0, 10);
                 let words = lyrics.split(1000);
                 message.reply("that song is to long!")
-                channel.send(words)
+                message.channel.send(words)
                 let words2 = lyrics.split(-1000);
-                channel.send(words2)
+                message.channel.send(words2)
                 return;
             } {
                 message.channel.send('```' + lyrics + '```');
