@@ -18,7 +18,6 @@ class MembersCommand extends Commando.Command {
             message.channel.send("You don't have permissions to use this command!");
             return;
         }
-        message.channel.send(message.guild.memberCount)
         var memberCount = new discord.RichEmbed()
             .setTitle("Members")
             .addField("Current Members", message.guild.memberCount, true)
