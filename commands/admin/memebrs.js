@@ -18,6 +18,13 @@ class MembersCommand extends Commando.Command {
             return;
         }
         message.channel.send(message.guild.memberCount)
+        var memberCount = new discord.RichEmbed()
+            .setTitle("Members")
+            .addField("Current Members", message.guild.memberCount, true)
+            .setColor('RANDOM')
+            .setFooter("woah thats a lot Owo")
+
+        channel.send(memberCount);
     }
 }
 module.exports = MembersCommand;
