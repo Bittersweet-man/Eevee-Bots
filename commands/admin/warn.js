@@ -16,7 +16,6 @@ class WarnCommand extends Commando.Command {
 
     async run(message, args) {
         let warnedUser = message.guild.member(message.mentions.users.first());
-        console.log(warnedUser)
         if (!warnedUser) {
             message.channel.send("Sorry, I cound't find that person");
             return;
