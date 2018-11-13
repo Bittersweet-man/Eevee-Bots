@@ -27,7 +27,7 @@ class CoinFlipCommand extends Commando.Command {
             .setDescription("A coin was flipped!")
             .setTimestamp()
             .setColor('RANDOM')
-            .setFooter('Requested by ' + message.author.displayName)
+            .setFooter('Requested by ' + message.author.guild.displayName)
         message.channel.send({
             embed: fEmbed
         })
