@@ -1,12 +1,12 @@
 const Commando = require('discord.js-commando');
 
-class SpamsylvCommand extends Commando.Command {
+class SpamBitCommand extends Commando.Command {
     constructor(client, ) {
         super(client, {
-            name: 'spamsylv',
+            name: 'spamBit',
             group: 'admin',
-            memberName: 'spamsylv',
-            description: 'Spam sylveon'
+            memberName: 'spamBit',
+            description: 'Spam Bittersweet'
         });
     }
 
@@ -18,9 +18,9 @@ class SpamsylvCommand extends Commando.Command {
             return;
         }
         var sylveon = '413754421365964800'
-        message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
-        message.channel.send('<@413754421365964800>')
+        message.channel.send('<@462709446121095169>')
+        message.channel.send('<@462709446121095169>')
+        message.channel.send('<@462709446121095169>')
     }
 }
-module.exports = SpamsylvCommand;
+module.exports = SpamBitCommand;
