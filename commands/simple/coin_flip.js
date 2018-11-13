@@ -28,7 +28,7 @@ class CoinFlipCommand extends Commando.Command {
             .setTimestamp()
             .setColor('RANDOM')
             .setFooter('Requested by ' + message.author)
-        channel.send({
+        message.channel.send({
             embed: fEmbed
         })
     }
