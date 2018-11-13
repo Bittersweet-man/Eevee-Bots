@@ -21,15 +21,7 @@ class CoinFlipCommand extends Commando.Command {
             var results = 'tails'
             //message.reply("Your coin landed on Tails!", {files: [__dirname + "/CoinPics/tails.jpg"]});;
         }
-        if (results == 'tails') {
-            var image = 'https: //mbtskoudsalg.com/images/quarter-tail-png-7.png '
-
-        } else {
-            var image = 'https://bjc.edc.org/June2017/bjc-r/img/5-algorithms/img_flipping-a-coin/Heads.png'
-        }
-
-
-
+        
         let fEmbed = new discord.RichEmbed()
             .setTitle('Flip')
             .addField('Result', 'Your coin landed on ' + results)
@@ -37,7 +29,6 @@ class CoinFlipCommand extends Commando.Command {
             .setDescription("A coin was flipped!")
             .setTimestamp()
             .setColor('RANDOM')
-            .setImage(image)
         message.channel.send({
             embed: fEmbed
         })
