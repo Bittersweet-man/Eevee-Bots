@@ -24,10 +24,10 @@ class CoinFlipCommand extends Commando.Command {
         let fEmbed = new discord.RichEmbed()
             .setTitle('Flip')
             .addField('Result', 'Your coin landed on ' + results)
+            .addField('Requested by user ' + message.author)
             .setDescription("A coin was flipped!")
             .setTimestamp()
             .setColor('RANDOM')
-            .setFooter('Requested by ' + message.author.guild.displayName)
         message.channel.send({
             embed: fEmbed
         })
