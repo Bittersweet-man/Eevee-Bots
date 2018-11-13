@@ -3,9 +3,9 @@ const Commando = require('discord.js-commando');
 class SpamBitCommand extends Commando.Command {
     constructor(client, ) {
         super(client, {
-            name: 'spamBit',
+            name: 'spambit',
             group: 'admin',
-            memberName: 'spamBit',
+            memberName: 'spambit',
             description: 'Spam Bittersweet'
         });
     }
