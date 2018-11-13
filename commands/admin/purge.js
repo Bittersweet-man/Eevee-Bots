@@ -22,7 +22,7 @@ class PurgeCommand extends Commando.Command {
         var channel = message.guild.channels.find("name", "modlogs");
         let pEmbed = new discord.RichEmbed()
             .setTitle('Purge')
-            .addField('Puged Messaged', message.author + ' just purged ' + args + ' messages')
+            .addField('Purged Messaged', message.author + ' just purged ' + args + ' messages')
             .addField('Channel', message.channel)
             .setFooter("Thanks for keeping the chats clean")
             .setTimestamp()
