@@ -1,4 +1,5 @@
 const Commando = require('discord.js-commando');
+const bot = new Commando.Client()
 var lyr = require('lyrics-fetcher');
 
 class LyricsCommand extends Commando.Command {
