@@ -13,7 +13,7 @@ var lyr = require('lyrics-fetcher');
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
 bot.registry.registerGroup('admin', 'Admin');
-
+bot.registry.registerGroup('animals', 'Animals');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + '/commands');
 
