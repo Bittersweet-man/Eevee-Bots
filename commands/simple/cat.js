@@ -3,13 +3,13 @@ const superagent = require('superagent');
 const discord = require('discord.js');
 const bot = new Commando.Client()
 
-class DoggoCommand extends Commando.Command {
+class CatCommand extends Commando.Command {
     constructor(client, ) {
         super(client, {
-            name: 'doggo',
+            name: 'cat',
             group: 'simple',
-            memberName: 'doggo',
-            description: 'doggo'
+            memberName: 'cat',
+            description: 'cat'
         });
     }
 
@@ -19,14 +19,14 @@ class DoggoCommand extends Commando.Command {
         let {
             body
         } = await superagent
-            .get('https://dog.ceo/api/breeds/image/random')
+            .get('https://aws.random.cat/meow')
         //console.log(body.file)
         if (!{
                 body
             }) return message.channel.send('I broke! Please try again!')
-        let dEmbed = new discord.RichEmbed()
+        let cEmbed = new discord.RichEmbed()
             .setAuthor('Eeevee Bot', message.guild.iconURL)
-            .setImage(body.message)
+            .setImage(body.file)
             .setTimestamp()
             .setFooter('Eevee Bot')
             .setColor('RANDOM')
@@ -34,10 +34,10 @@ class DoggoCommand extends Commando.Command {
 
         message.delete();
         message.channel.send({
-            embed: dEmbed
+            embed: cEmbed
         })
 
     }
 }
 
-module.exports = DoggoCommand;
+module.exports = CatCommand;
