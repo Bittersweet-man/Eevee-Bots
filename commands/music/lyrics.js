@@ -16,7 +16,7 @@ class LyricsCommand extends Commando.Command {
     message.reply('What artist are you looking for?')
     const msgs = await message.channel.awaitMessages(msg => { 
         console.log(msg.content) ;
-        message.channel.send('Your artist is ' + msgs)
+        message.channel.send('Your artist is ' + msg.content)
     }, {time: 5000});
 
        //lyr.fetch(artist, song, function (err, lyrics) {
