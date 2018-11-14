@@ -19,7 +19,7 @@ class LyricsCommand extends Commando.Command {
         }, {
             time: 5000
         });
-
+console.log(msg.content)
 
 
         //lyr.fetch(artist, song, function (err, lyrics) {
