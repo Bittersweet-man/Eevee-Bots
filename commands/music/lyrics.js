@@ -14,11 +14,12 @@ class LyricsCommand extends Commando.Command {
 
     async run(message, args) {
         const msgs = await message.channel.awaitMessages(msg => {
-            //if (message.author.id === client.bot.id) return;
             message.reply('What artist are you looking for?')
-            console.log(msg.content);
-            message.channel.send('Your artist is ' + msg.content)
+            if (message.author.id !== bot.user.id) {
+                console.log(msg.content);
+                message.channel.send('Your artist is ' + msg.content)
 
+            }
         }, {
             time: 5000
         });
