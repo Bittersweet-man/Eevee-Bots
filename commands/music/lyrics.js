@@ -8,22 +8,21 @@ class LyricsCommand extends Commando.Command {
             name: 'lyrics',
             group: 'music',
             memberName: 'lyrics',
-            description: 'Get lyrics!(Of Sting)'
+            description: 'Get lyrics!'
         });
     }
 
 
     async run(message, args) {
         message.reply('What artist are you looking for?')
-        setInterval(function () {
-            const response = await message.channel.awaitMessages(msg => {
-                message.channel.send('Your artist is ' + response.content)
 
-            }, {
-                time: 5000
-            });
+        const response = await message.channel.awaitMessages(msg => {
+            message.channel.send('Your artist is ' + response.content)
 
-        }, 1000);
+        }, {
+            time: 5000
+        });
+
 
         //lyr.fetch(artist, song, function (err, lyrics) {
         //  if (args == null) {
