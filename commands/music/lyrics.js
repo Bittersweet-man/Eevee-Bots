@@ -15,12 +15,11 @@ class LyricsCommand extends Commando.Command {
 
     async run(message, args) {
         const msgs = await message.channel.awaitMessages(msg => {
-            message.channel.send('Your artist is ' + msg.content);
             if(msg.content != null){} return;
         }, {
             time: 5000
         });
-
+        message.channel.send('Your artist is ' + msg.content);
         //lyr.fetch(artist, song, function (err, lyrics) {
         //  if (args == null) {
         //    message.reply('Please specify the song you want the lyrics for!')
