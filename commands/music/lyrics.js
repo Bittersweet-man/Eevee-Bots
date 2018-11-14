@@ -13,9 +13,9 @@ class LyricsCommand extends Commando.Command {
 
 
     async run(message, args) {
-        message.reply('What artist are you looking for?')
         const msgs = await message.channel.awaitMessages(msg => {
-            if (message.author.id === client.bot.id) return;
+            //if (message.author.id === client.bot.id) return;
+            message.reply('What artist are you looking for?')
             console.log(msg.content);
             message.channel.send('Your artist is ' + msg.content)
 
