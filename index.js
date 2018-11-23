@@ -74,7 +74,7 @@ bot.on('message', function (message) {
     }
     if(message.content == '$shadow'){
         let myRole = message.guild.roles.get("515653899839864843");
-        member.addRole(myRole)
+        message.member.addRole(myRole)
         message.channel.send('welcome to the shadows')
     }
 })
