@@ -77,16 +77,28 @@ bot.on('message', function (message) {
         message.member.addRole(myRole)
         message.channel.send('welcome to the shadows')
     }
-    if (message.content.includes.toLoweCase('Nigga')) {
+    if (message.content.includes.toLoweCase('nigga')) {
         message.author.send("Please don't use the word \"Nigga\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
-    if (message.content.includes.toLoweCase('Nigger')) {
+    if (message.content.includes.toLoweCase('nigger')) {
         message.author.send("Please don't use the word \"Nigger\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
-    if (message.content.includes.toLoweCase('Faggot')) {
+    if (message.content.includes.toLoweCase('faggot')) {
         message.author.send("Please don't use the word \"Faggot\", or any slurs. This is just a warning, next time will result in a ban.")
+        message.delete();
+    }
+    if (message.content.includes.toLoweCase('fag')) {
+        message.author.send("Please don't use the word \"Fag\", or any slurs. This is just a warning, next time will result in a ban.")
+        message.delete();
+    }
+    if (message.content.includes.toLoweCase('retard')) {
+        message.author.send("Please don't use the word \"Retard\", or any slurs. This is just a warning, next time will result in a ban.")
+        message.delete();
+    }
+    if (message.content.includes.toLoweCase('dike')) {
+        message.author.send("Please don't use the word \"Dike\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
 })
