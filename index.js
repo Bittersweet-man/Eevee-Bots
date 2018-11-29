@@ -109,7 +109,7 @@ bot.on('message', function (message) {
         message.author.send("Please don't use the word \"Faggot\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
-    if (message.content..includes("retard")){
+    if (message.content.includes("retard")){
         message.author.send("Please don't use the word \"Retard\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
