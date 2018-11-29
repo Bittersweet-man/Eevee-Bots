@@ -77,4 +77,16 @@ bot.on('message', function (message) {
         message.member.addRole(myRole)
         message.channel.send('welcome to the shadows')
     }
+    if (message.content.includes.toLoweCase('Nigga')) {
+        message.author.send("Please don't use the word \"Nigga\", or any slurs. This is just a warning, next time will result in a ban.")
+        message.delete();
+    }
+    if (message.content.includes.toLoweCase('Nigger')) {
+        message.author.send("Please don't use the word \"Nigger\", or any slurs. This is just a warning, next time will result in a ban.")
+        message.delete();
+    }
+    if (message.content.includes.toLoweCase('Faggot')) {
+        message.author.send("Please don't use the word \"Faggot\", or any slurs. This is just a warning, next time will result in a ban.")
+        message.delete();
+    }
 })
