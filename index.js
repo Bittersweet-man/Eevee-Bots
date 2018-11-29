@@ -72,33 +72,34 @@ bot.on('message', function (message) {
         message.reply('You have been accepted to the Sylveon Squad!')
         message.member.addRole('473668077754777602')
     }
-    if(message.content == '$shadow'){
+    if (message.content == '$shadow') {
         let myRole = message.guild.roles.get("515653899839864843");
         message.member.addRole(myRole)
         message.channel.send('welcome to the shadows')
     }
-    if (message.content.includes.toLoweCase('nigga')) {
+    if (message.content.toLowerCase().includes("nigga ")){
         message.author.send("Please don't use the word \"Nigga\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
-    if (message.content.includes.toLoweCase('nigger')) {
+    if (message.content.toLowerCase().includes("nigger ")){
         message.author.send("Please don't use the word \"Nigger\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
-    if (message.content.includes.toLoweCase('faggot')) {
-        message.author.send("Please don't use the word \"Faggot\", or any slurs. This is just a warning, next time will result in a ban.")
-        message.delete();
-    }
-    if (message.content.includes.toLoweCase('fag')) {
+    if (message.content.toLowerCase().includes("fag ")){
         message.author.send("Please don't use the word \"Fag\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
-    if (message.content.includes.toLoweCase('retard')) {
+    if (message.content.toLowerCase().includes("faggot ")){
+        message.author.send("Please don't use the word \"Faggot\", or any slurs. This is just a warning, next time will result in a ban.")
+        message.delete();
+    }
+    if (message.content.toLowerCase().includes("retard ")){
         message.author.send("Please don't use the word \"Retard\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
-    if (message.content.includes.toLoweCase('dike')) {
+    if (message.content.toLowerCase().includes("dike ")){
         message.author.send("Please don't use the word \"Dike\", or any slurs. This is just a warning, next time will result in a ban.")
         message.delete();
     }
+
 })
