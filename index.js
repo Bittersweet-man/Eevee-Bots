@@ -99,6 +99,7 @@ bot.on('message', function (message) {
     }
     if (message.content.toLowerCase().includes("dike ")){
         message.author.send("Please don't use the word \"Dike\", or any slurs. This is just a warning, next time will result in a ban.")
+        message.channel.send('test')
         message.delete();
     }
 
