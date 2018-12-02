@@ -72,8 +72,13 @@ bot.on('message', function (message) {
         message.reply('You have been accepted to the Sylveon Squad!')
         message.member.addRole('473668077754777602')
         setTimeout(function () {
+            message.member.removeRole('473668077754777602')
             message.channel.send('Newcomer removed')
+            message.member.addRole('518888626642485253')
+            message.channel.send('Role added')
+
         }, 10000);
+        //86,400,000
     }
     if (message.content == '$shadow') {
         let myRole = message.guild.roles.get("515653899839864843");
