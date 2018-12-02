@@ -1,4 +1,5 @@
 const Commando = require('discord.js-commando');
+const discord = require('discord.js');
 
 class EightBallCommand extends Commando.Command {
     constructor(client, ) {
