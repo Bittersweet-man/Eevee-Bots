@@ -15,65 +15,65 @@ class EightBallCommand extends Commando.Command {
     async run(message, args) {
         var chance = Math.floor(Math.random() * 20)
         if (chance == 0) {
-            let answer = "it is certain."
+            var answer = "it is certain."
             
         }
         if (chance == 1) {
-            let answer = "It is decidedly so."
+            var answer = "It is decidedly so."
         }
         if (chance == 2) {
-            let answer = "Without a doubt."
+            var answer = "Without a doubt."
         }
         if (chance == 3) {
-            let answer ="Yes - definetely."
+            var answer ="Yes - definetely."
         }
         if (chance == 4) {
-            let answer ="You may rely on it."
+            var answer ="You may rely on it."
         }
         if (chance == 5) {
-            let answer ="As I see it, yes."
+            var answer ="As I see it, yes."
         }
         if (chance == 6) {
-            let answer ="Most likely."
+            var answer ="Most likely."
         }
         if (chance == 7) {
-            message.channel.send("Outlook good.");
+            var answer ="Outlook good."
         }
         if (chance == 8) {
-            let answer ="Yes."
+            var answer ="Yes."
         }
         if (chance == 9) {
-            let answer ="Signs point to yes."
+            var answer ="Signs point to yes."
         }
         if (chance == 10) {
-            let answer ="Reply hazy, try again."
+            var answer ="Reply hazy, try again."
         }
         if (chance == 11) {
-            let answer ="Ask again later."
+            var answer ="Ask again later."
         }
         if (chance == 12) {
-            let answer ="Better not tell you now."
+            var answer ="Better not tell you now."
         }
         if (chance == 13) {
-            let answer ="Cannot predict now."
+            var answer ="Cannot predict now."
         }
         if (chance == 14) {
-            let answer ="Concentrate and ask again."
+            var answer ="Concentrate and ask again."
         }
         if (chance == 15) {
-            let answer ="Don't count on it."
+            var answer ="Don't count on it."
         }
         if (chance == 16) {
-            let answer ="My reply is no."
+            var answer ="My reply is no."
         }
         if (chance == 17) {
-            let answer ="My sources say no."
+            var answer ="My sources say no."
         }
         if (chance == 18) {
-            let answer ="Outlook not so good."
+            var answer ="Outlook not so good."
         }
         if (chance == 19) {
-            let answer ="Very doubtful."
+            var answer ="Very doubtful."
         }
         let BEmbed = new discord.RichEmbed()
             .setTitle('8Ball')
