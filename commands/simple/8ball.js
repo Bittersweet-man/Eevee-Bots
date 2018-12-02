@@ -14,65 +14,75 @@ class EightBallCommand extends Commando.Command {
     async run(message, args) {
         var chance = Math.floor(Math.random() * 20)
         if (chance == 0) {
-            message.channel.send("it is certain.");
+            let answer = "it is certain."
+            
         }
         if (chance == 1) {
-            message.channel.send("It is decidedly so.");
+            let answer = "It is decidedly so."
         }
         if (chance == 2) {
-            message.channel.send("Without a doubt.");
+            let answer = "Without a doubt."
         }
         if (chance == 3) {
-            message.channel.send("Yes - definetely.");
+            let answer ="Yes - definetely."
         }
         if (chance == 4) {
-            message.channel.send("You may rely on it.")
+            let answer ="You may rely on it."
         }
         if (chance == 5) {
-            message.channel.send("As I see it, yes.");
+            let answer ="As I see it, yes."
         }
         if (chance == 6) {
-            message.channel.send("Most likely.");
+            let answer ="Most likely."
         }
         if (chance == 7) {
             message.channel.send("Outlook good.");
         }
         if (chance == 8) {
-            message.channel.send("Yes.");
+            let answer ="Yes."
         }
         if (chance == 9) {
-            message.channel.send("Signs point to yes.");
+            let answer ="Signs point to yes."
         }
         if (chance == 10) {
-            message.channel.send("Reply hazy, try again.");
+            let answer ="Reply hazy, try again."
         }
         if (chance == 11) {
-            message.channel.send("Ask again later.");
+            let answer ="Ask again later."
         }
         if (chance == 12) {
-            message.channel.send("Better not tell you now.");
+            let answer ="Better not tell you now."
         }
         if (chance == 13) {
-            message.channel.send("Cannot predict now.");
+            let answer ="Cannot predict now."
         }
         if (chance == 14) {
-            message.channel.send("Concentrate and ask again.");
+            let answer ="Concentrate and ask again."
         }
         if (chance == 15) {
-            message.channel.send("Don't count on it.");
+            let answer ="Don't count on it."
         }
         if (chance == 16) {
-            message.channel.send("My reply is no.");
+            let answer ="My reply is no."
         }
         if (chance == 17) {
-            message.channel.send("My sources say no.");
+            let answer ="My sources say no."
         }
         if (chance == 18) {
-            message.channel.send("Outlook not so good.");
+            let answer ="Outlook not so good."
         }
         if (chance == 19) {
-            message.channel.send("Very doubtful.");
+            let answer ="Very doubtful."
         }
+        let BEmbed = new discord.RichEmbed()
+            .setTitle('8Ball')
+            .addField('Result', answer)
+            .addField('Requested by', message.author)
+            .setTimestamp()
+            .setColor('RANDOM')
+        message.channel.send({
+            embed: BEmbed
+        })
     }
 }
 
