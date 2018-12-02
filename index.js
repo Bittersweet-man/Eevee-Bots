@@ -71,6 +71,9 @@ bot.on('message', function (message) {
     if (message.content == "accept") {
         message.reply('You have been accepted to the Sylveon Squad!')
         message.member.addRole('473668077754777602')
+        setTimeout(function () {
+            message.channel.send('Newcomer removed')
+        }, 10000);
     }
     if (message.content == '$shadow') {
         let myRole = message.guild.roles.get("515653899839864843");
