@@ -19,33 +19,27 @@ class LyricsCommand extends Commando.Command {
         const msgs = await message.channel.awaitMessages(filter, { max: 1 })
             .then(async collected => {
                 var response = collected.array()[0];
-                 artist = response.content
+                 var artist = response.content
             })
-            message.channel.send(artist)
        
-        //message.channel.send('Your artist is ' + msgs.content);
-        //lyr.fetch(artist, song, function (err, lyrics) {
-        //  if (args == null) {
-        //    message.reply('Please specify the song you want the lyrics for!')
+        lyr.fetch(twentyonepilots, legend, function (err, lyrics) {
+            if (lyrics.length > 2000) {
+             var lyrics = lyrics.substring(0, 2000);
+            let words = lyrics.split(2000);
+                        message.channel.send('```' + words + '```')
+                  } {
+                    if (lyrics.length < 2000) {
+                      message.channel.send('```' + lyrics + '```');
+                }
+          } {
+            if (lyrics.length > 2000) {
+            var lyrics2 = lyrics.slice(-1000);
+            message.channel.send('```' + lyrics2 + '```')
 
-        //}
-        //    if (lyrics.length > 2000) {
-        //     var lyrics = lyrics.substring(0, 2000);
-        //    let words = lyrics.split(2000);
-        //                message.channel.send('```' + words + '```')
-        //          } {
-        //            if (lyrics.length < 2000) {
-        //              message.channel.send('```' + lyrics + '```');
-        //        }
-        //  } {
-        //    if (lyrics.length > 2000) {
-        //    var lyrics2 = lyrics.slice(-1000);
-        //    message.channel.send('```' + lyrics2 + '```')
+                        }
+                  }
 
-        //                }
-        //          }
-
-        //     });
+             });
     }
 }
 
