@@ -15,7 +15,7 @@ class LyricsCommand extends Commando.Command {
 
 
     async run(message, args) {
-        await this._channel.awaitMessages(filter, { max: 1 })
+        await this.channel.awaitMessages(filter, { max: 1 })
             .then(async collected => {
 
                 // Get discordMessage
