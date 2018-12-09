@@ -29,7 +29,7 @@ class LyricsCommand extends Commando.Command {
            } else if (message.content == "no") {
                message.channel.send("test tes");
            }})
-        message.channel.send('Your artist is ' + msgs.content);
+        //message.channel.send('Your artist is ' + msgs.content);
         //lyr.fetch(artist, song, function (err, lyrics) {
         //  if (args == null) {
         //    message.reply('Please specify the song you want the lyrics for!')
