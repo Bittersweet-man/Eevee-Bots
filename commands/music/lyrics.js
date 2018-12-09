@@ -21,6 +21,7 @@ class LyricsCommand extends Commando.Command {
                 var response = collected.array()[0];
                 artist = response.content
             })
+message.channel.send(artist)
         lyr.fetch(artist, "legend", function (err, lyrics) {
             if (lyrics.length > 2000) {
              var lyrics = lyrics.substring(0, 2000);
