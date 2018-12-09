@@ -66,4 +66,5 @@ class LyricsCommand extends Commando.Command {
     }
 }
 
+
 module.exports = LyricsCommand;
