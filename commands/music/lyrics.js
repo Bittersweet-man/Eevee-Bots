@@ -16,10 +16,11 @@ class LyricsCommand extends Commando.Command {
 
 
     async run(message, args) {
-        if(args == "null"){
+        if(args = "null"){
             message.channel.send('Please specify an artist!')
             return;
         }
+        if(args != "null"){
         message.channel.send('What song from ' + args + "?")
         const msgs = await message.channel.awaitMessages(filter, { max: 1 })
             .then(async collected => {
@@ -46,6 +47,6 @@ message.channel.send(artist)
 
              });
     }
-}
+}}
 
 module.exports = LyricsCommand;
