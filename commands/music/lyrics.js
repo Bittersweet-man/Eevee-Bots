@@ -1,6 +1,7 @@
 const Commando = require('discord.js-commando');
 const Discord = require('discord.js');
 const bot = new Commando.Client()
+const filter = m => m.content.startsWith('a');
 var lyr = require('lyrics-fetcher');
 
 class LyricsCommand extends Commando.Command {
@@ -17,8 +18,6 @@ class LyricsCommand extends Commando.Command {
     async run(message, args) {
         const msgs = await message.channel.awaitMessages(filter, { max: 1 })
             .then(async collected => {
-
-                // Get discordMessage
                 var response = collected.array()[0];
                 message.channel.send(response)
             })
