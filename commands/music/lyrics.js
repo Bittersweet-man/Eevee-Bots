@@ -1,7 +1,7 @@
 const Commando = require('discord.js-commando');
 const Discord = require('discord.js');
 const bot = new Commando.Client()
-const filter = m => m.content.startsWith('a');
+const filter = m => m.content.startsWith('');
 var lyr = require('lyrics-fetcher');
 
 class LyricsCommand extends Commando.Command {
