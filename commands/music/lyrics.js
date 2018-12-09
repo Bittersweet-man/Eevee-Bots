@@ -16,37 +16,39 @@ class LyricsCommand extends Commando.Command {
 
 
     async run(message, args) {
-        if(!args){
+        if (!args) {
             message.channel.send('Please specify an artist!')
             return;
-        }
-        else{
-        message.channel.send('What song from ' + args + "?")
-        const msgs = await message.channel.awaitMessages(filter, { max: 1 })
-            .then(async collected => {
-                var response = collected.array()[0];
-                song = response.content
-            })
-message.channel.send(artist)
-        lyr.fetch(args, song, function (err, lyrics) {
-            if (lyrics.length > 2000) {
-             var lyrics = lyrics.substring(0, 2000);
-            let words = lyrics.split(2000);
-                        message.channel.send('```' + words + '```')
-                  } {
-                    if (lyrics.length < 2000) {
-                      message.channel.send('```' + lyrics + '```');
-                }
-          } {
-            if (lyrics.length > 2000) {
-            var lyrics2 = lyrics.slice(-1000);
-            message.channel.send('```' + lyrics2 + '```')
+        } else {
+            message.channel.send('What song from ' + args + "?")
+            const msgs = await message.channel.awaitMessages(filter, {
+                    max: 1
+                })
+                .then(async collected => {
+                    var response = collected.array()[0];
+                    song = response.content
+                    lyr.fetch(args, song, function (err, lyrics) {
+                        if (lyrics.length > 2000) {
+                            var lyrics = lyrics.substring(0, 2000);
+                            let words = lyrics.split(2000);
+                            message.channel.send('```' + words + '```')
+                        } {
+                            if (lyrics.length < 2000) {
+                                message.channel.send('```' + lyrics + '```');
+                            }
+                        } {
+                            if (lyrics.length > 2000) {
+                                var lyrics2 = lyrics.slice(-1000);
+                                message.channel.send('```' + lyrics2 + '```')
 
+                            }
                         }
-                  }
 
-             });
+                    });
+                })
+        }
+
     }
-}}
+}
 
 module.exports = LyricsCommand;
