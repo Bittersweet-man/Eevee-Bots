@@ -26,7 +26,7 @@ class LyricsCommand extends Commando.Command {
                 })
                 .then(async collected => {
                     var response = collected.array()[0];
-                    song = response.content
+                    var song = response.content
                     lyr.fetch(args, song, function (err, lyrics) {
                         if (lyrics.length > 2000) {
                             var lyrics = lyrics.substring(0, 2000);
