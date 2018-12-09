@@ -22,7 +22,7 @@ class LyricsCommand extends Commando.Command {
                  var artist = response.content
             })
        
-        lyr.fetch("twenty one pilots", "legend", function (err, lyrics) {
+        lyr.fetch(artist, "legend", function (err, lyrics) {
             if (lyrics.length > 2000) {
              var lyrics = lyrics.substring(0, 2000);
             let words = lyrics.split(2000);
