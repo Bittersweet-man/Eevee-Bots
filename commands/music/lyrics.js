@@ -21,7 +21,7 @@ class LyricsCommand extends Commando.Command {
        }, {
         time: 5000
         });
-        message.channel.send(msgs)
+        message.channel.send(msgs.content)
        
         //message.channel.send('Your artist is ' + msgs.content);
         //lyr.fetch(artist, song, function (err, lyrics) {
