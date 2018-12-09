@@ -19,9 +19,10 @@ class LyricsCommand extends Commando.Command {
             .then(async collected => {
 
                 // Get discordMessage
-                let response = collected.array()[0];
+                var response = collected.array()[0];
+                message.channel.send(response)
             })
-            message.channel.send(response)
+            
        
         //message.channel.send('Your artist is ' + msgs.content);
         //lyr.fetch(artist, song, function (err, lyrics) {
