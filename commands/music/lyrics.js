@@ -21,8 +21,14 @@ class LyricsCommand extends Commando.Command {
         //}, {
           //  time: 5000
        // });
-       message.channel.awaitMessages(filter, { max: 1, time: 5000, errors: ['time'] })
-      message.channel.send(message.content)
+       message.channel.send('Test')
+.then(() => {
+  message.channel.awaitMessages(response => response.content === 'test', {
+    max: 1,
+    time: 30000,
+    errors: ['time'],
+  })})
+  message.channel.send(`The collected message was: ${collected.first().content}`);
         //message.channel.send('Your artist is ' + msgs.content);
         //lyr.fetch(artist, song, function (err, lyrics) {
         //  if (args == null) {
