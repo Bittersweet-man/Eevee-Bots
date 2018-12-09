@@ -21,12 +21,8 @@ class LyricsCommand extends Commando.Command {
         //}, {
           //  time: 5000
        // });
-       const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-       console.log(collector)
-       collector.on('collect', message => {
-           var artist = collector.content
-           message.channel.send(artist)
-           })
+       channel.awaitMessages(filter, { max: 1, time: 5000, errors: ['time'] })
+      message.channel.send(message.content)
         //message.channel.send('Your artist is ' + msgs.content);
         //lyr.fetch(artist, song, function (err, lyrics) {
         //  if (args == null) {
