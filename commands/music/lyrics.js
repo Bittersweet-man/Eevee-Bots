@@ -19,9 +19,9 @@ class LyricsCommand extends Commando.Command {
         const msgs = await message.channel.awaitMessages(filter, { max: 1 })
             .then(async collected => {
                 var response = collected.array()[0];
-                message.channel.send(response.content)
+                 artist = response.content
             })
-            
+            message.channel.send(artist)
        
         //message.channel.send('Your artist is ' + msgs.content);
         //lyr.fetch(artist, song, function (err, lyrics) {
