@@ -15,7 +15,7 @@ class LyricsCommand extends Commando.Command {
 
     async run(message, args) {
         const msgs = await message.channel.awaitMessages(msg => {
-            if(msg.content != null){} return;
+            if(message.content != null){} return;
         }, {
             time: 5000
         });
