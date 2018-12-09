@@ -27,6 +27,7 @@ class LyricsCommand extends Commando.Command {
                 .then(async collected => {
                     var response = collected.array()[0];
                     var song = response.content
+                    message.channel.send(song)
                     setTimeout(function () {
                         lyr.fetch(args, song, function (err, lyrics) {
                             if (lyrics.length > 2000) {
