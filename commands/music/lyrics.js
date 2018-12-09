@@ -14,12 +14,20 @@ class LyricsCommand extends Commando.Command {
 
 
     async run(message, args) {
-        message.channel.send("test")
-        const msgs = await message.channel.awaitMessages(msg => {
-            if(message.content != null){} return;
-        }, {
-            time: 5000
-        });
+       // message.channel.send("test")
+        //const msgs = await message.channel.awaitMessages(msg => {
+         //   if(message.content != null){} return;
+        //}, {
+          //  time: 5000
+       // });
+       const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+       console.log(collector)
+       collector.on('collect', message => {
+           if (message.content == "test") {
+               message.channel.send("test test");
+           } else if (message.content == "no") {
+               message.channel.send("test tes");
+           }})
         message.channel.send('Your artist is ' + msgs.content);
         //lyr.fetch(artist, song, function (err, lyrics) {
         //  if (args == null) {
