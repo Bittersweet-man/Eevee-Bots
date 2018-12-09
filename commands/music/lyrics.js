@@ -1,4 +1,5 @@
 const Commando = require('discord.js-commando');
+const Discord = require('discord.js');
 const bot = new Commando.Client()
 var lyr = require('lyrics-fetcher');
 
