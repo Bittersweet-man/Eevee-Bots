@@ -19,7 +19,7 @@ class LyricsCommand extends Commando.Command {
         const msgs = await message.channel.awaitMessages(filter, { max: 1 })
             .then(async collected => {
                 var response = collected.array()[0];
-                message.channel.send(msgs.content)
+                message.channel.send(response.content)
             })
             
        
