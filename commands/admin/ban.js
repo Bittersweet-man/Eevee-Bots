@@ -33,6 +33,7 @@ class BanCommand extends Commando.Command {
             .setTitle('Ban')
             .addField('Banned User', BannedUser)
             .addField('Banned By', message.author)
+            .addField("Reason", reason)
             .setDescription("A user was banned!")
             .setTimestamp()
             .setColor(0xFF0000)
