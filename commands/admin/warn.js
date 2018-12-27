@@ -30,6 +30,7 @@ class WarnCommand extends Commando.Command {
         .setTitle('Warn')
         .addField('Warned User', warnedUser)
         .addField('Warned By', message.author)
+        .addField("Reason", "Warned for \"" + reason + "\"")
         .setDescription("A user was warned!")
         .setTimestamp()
         .setColor(0xFFFF00)
