@@ -33,6 +33,7 @@ class KickCommand extends Commando.Command {
             .setTitle('Kick')
             .addField('Kicked User', kickedUser)
             .addField('Kicked By', message.author)
+            .addField('Reason', reason)
             .setDescription("A user was Kicked!")
             .setTimestamp()
             .setColor(0xFFA500)
