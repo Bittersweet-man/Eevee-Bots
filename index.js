@@ -71,12 +71,6 @@ bot.on('message', function (message) {
     if (message.content == "accept") {
         message.reply('You have been accepted to the Sylveon Squad!')
         message.member.addRole('473668077754777602')
-        setTimeout(function () {
-            message.member.removeRole('473668077754777602')
-            message.member.addRole('518888626642485253')
-
-        }, 86400000);
-        
     }
     if (message.content == '$shadow') {
         let myRole = message.guild.roles.get("515653899839864843");
@@ -133,5 +127,8 @@ bot.on('message', function (message) {
         message.delete();
         message.author.send("Please don't use the word \"Dike\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-
+if(message.content == "welcome")
+{
+    message.author.send("ok")
+}
 })
