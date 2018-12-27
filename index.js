@@ -127,8 +127,4 @@ bot.on('message', function (message) {
         message.delete();
         message.author.send("Please don't use the word \"Dike\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-if(message.content == "welcome")
-{
-    message.author.send("ok")
-}
 })

@@ -20,7 +20,7 @@ class WarnCommand extends Commando.Command {
             message.channel.send("Sorry, I cound't find that person");
             return;
         }
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
+        if (!message.member.hasPermission("CAN_KICK")) {
             message.channel.send("You don't have permissions to use this command!");
             return;
         }
