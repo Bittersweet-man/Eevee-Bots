@@ -24,8 +24,8 @@ class BanCommand extends Commando.Command {
             message.channel.send("You don't have permissions to use this command!");
             return;
         }
-        let words = args.split(' ');
-        let reason = words.slice(1).join(' ');
+        var words = args.split(' ');
+        var reason = words.slice(1).join(' ');
         if(reason === null){
             var reason = "Reason was not specified"
         }
