@@ -24,6 +24,8 @@ class WarnCommand extends Commando.Command {
             message.channel.send("You don't have permissions to use this command!");
             return;
         }
+        var words = args.split(' ');
+        var reason = words.slice(1).join(' ');
         var channel = message.guild.channels.find("name", "modlogs");
         message.channel.send("Alright, user " + warnedUser.displayName + " has been warned.")
         let wEmbed = new discord.RichEmbed()
