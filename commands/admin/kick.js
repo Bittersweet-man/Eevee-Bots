@@ -26,6 +26,9 @@ class KickCommand extends Commando.Command {
         }
         let words = args.split(' ');
         let reason = words.slice(1).join(' ');
+        if(reason == null){
+            let reason = "Reason was not specified"
+        }
         message.guild.member(kickedUser).kick(reason)
         message.reply("Alright, user " + kickedUser.displayName + " has been kicked.")
         var channel = message.guild.channels.find("name", "modlogs");

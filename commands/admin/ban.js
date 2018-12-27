@@ -26,6 +26,9 @@ class BanCommand extends Commando.Command {
         }
         let words = args.split(' ');
         let reason = words.slice(1).join(' ');
+        if(reason == null){
+            let reason = "Reason was not specified"
+        }
         message.guild.member(BannedUser).ban(reason)
         message.reply("Alright, user " + BannedUser.displayName + " has been banned.")
         var channel = message.guild.channels.find("name", "modlogs");
