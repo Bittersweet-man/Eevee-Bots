@@ -28,7 +28,7 @@ class DoggoCommand extends Commando.Command {
             .setAuthor('Eeevee Bot', message.guild.iconURL)
             .setImage(body.message)
             .setTimestamp()
-            .setFooter('Eevee Bot')
+            .setFooter('Sylveon Bot')
             .setColor('RANDOM')
         // bot.user.displayAvatarURL
 

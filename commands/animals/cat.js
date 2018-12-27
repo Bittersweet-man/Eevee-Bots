@@ -28,7 +28,7 @@ class CatCommand extends Commando.Command {
             .setAuthor('Eeevee Bot', message.guild.iconURL)
             .setImage(body.file)
             .setTimestamp()
-            .setFooter('Eevee Bot')
+            .setFooter('Sylveon Bot')
             .setColor('RANDOM')
         // bot.user.displayAvatarURL
 
