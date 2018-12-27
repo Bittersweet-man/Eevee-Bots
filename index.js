@@ -30,7 +30,7 @@ bot.on('ready', () => {
     bot.user.setActivity("Type ?help", {
         type: 'PLAYING'
     })
-    console.log(`Logged in as ${client.user.tag}!`)
+    console.log(`Logged in as ${bot.user.tag}!`)
 });
 
 bot.on("guildMemberAdd", function (member) {
