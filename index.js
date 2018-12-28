@@ -8,7 +8,6 @@ const bot = new Commando.Client({
 const ytdl = require('ytdl-core');
 const discord = require('discord.js');
 var lyr = require('lyrics-fetcher');
-const { DISCORD_BOT_TOKEN, LASTFM_API_KEY } = require('./keys')
 
 
 bot.registry.registerGroup('simple', 'Simple');
