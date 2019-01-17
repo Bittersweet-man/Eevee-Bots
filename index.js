@@ -1,19 +1,21 @@
+
 const Commando = require('discord.js-commando');
-const TOKEN = process.env.;
+const TOKEN = process.env.TOKN;
 const bot = new Commando.Client({
     commandPrefix: "?",
-    owner: "462709446121095169",
-    owner: "413754421365964800"
-})
-const ytdl = require('ytdl-core');
-const discord = require('discord.js');
-var lyr = require('lyrics-fetcher');
+      owner: "413754421365964800",
+    owner: "462709446121095169"
 
+})
+const discord = require('discord.js')
+const SQLite = require("better-sqlite3");
+const dl = require('discord-leveling');
 
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
 bot.registry.registerGroup('admin', 'Admin');
 bot.registry.registerGroup('animals', 'Animals');
+bot.registry.registerGroup('levels', 'Levels');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + '/commands');
 
@@ -30,7 +32,7 @@ bot.on('ready', () => {
         type: 'PLAYING'
     })
     console.log(`Logged in as ${bot.user.tag}!`)
-});
+})
 
 bot.on("guildMemberAdd", function (member) {
     if (member.guild.id == 465707591910162432) {
@@ -46,7 +48,7 @@ bot.on("guildMemberAdd", function (member) {
             .addField("Rules", "Make sure to read " + rules + " and do \'accept\' in" + accept + " to get access to the server!", true)
             .setDescription("You're user " + member.guild.memberCount)
             .setColor('RANDOM')
-            .setImage(member.avatarURL)
+            .setImage(member.user.avatarURL)
             .setFooter("Welcome to the server!")
 
         channel.send(welcome);
@@ -68,7 +70,64 @@ bot.on("guildMemberRemove", function (member) {
 
 );
 
+
+bot.on('message', async message => {
+    if (message.author.bot) return;
+    var profile = await dl.Fetch(message.author.id)
+    var XPamount = Math.floor(Math.random() * 6) + 1
+    dl.AddXp(message.author.id, XPamount)
+    //If user xp higher than 100 add level
+    if (profile.xp + 10 > 100) {
+        await dl.AddLevel(message.author.id, 1)
+        await dl.SetXp(message.author.id, 1)
+        message.reply(`You just leveled up!! You are now level: ${profile.level + 1}`)
+    }
+    var channel = message.guild.channels.find(channel => channel.name === "staff")
+    if (message.content == "leaderboard") {
+    //If you put a mention behind the command it searches for the mentioned user in database and tells the position.
+    if (message.mentions.users.first()) {
+ 
+      var output = await dl.Leaderboard({
+        search: message.mentions.users.first().id
+      })
+      message.channel.send(`The user ${message.mentions.users.first().tag} is number ${output.placement} on my leaderboard!`);
+ 
+      //Searches for the top 3 and outputs it to the user.
+    } else {
+ 
+      dl.Leaderboard({
+        limit: 3
+      }).then(async users => { //make sure it is async
+ 
+        var firstplace = await bot.fechUser(users[0].userid) //Searches for the user object in discord for first place
+        var secondplace = await bot.fetchUser(users[1].userid) //Searches for the user object in discord for second place
+        var thirdplace = await bot.fetchUser(users[2].userid) //Searches for the user object in discord for third place
+ 
+        message.channel.send(`My leaderboard:
+ 
+1 - ${firstplace.tag} : ${users[0].level} : ${users[0].xp}
+2 - ${secondplace.tag} : ${users[1].level} : ${users[1].xp}
+3 - ${thirdplace.tag} : ${users[2].level} : ${users[2].xp}`)
+ 
+      })
+ 
+    }
+  }
+}
+)
+
+
+
+
 bot.on('message', function (message) {
+  if(message.content == "test"){
+   message.reply("okk") 
+  }
+  if(message.content == "reboot"){
+    message.channel.send('Resetting...')
+    .then(msg => bot.destroy())
+    .then(() => bot.login('NTExMDA2MDU0NDk1Mjg5MzU0.DxA4dg.oLhvW15TbZ6th6T8jHSPBUb1drI'));
+  }
     if (message.content == "accept") {
         message.reply('You have been accepted to the Sylveon Squad!')
         message.member.addRole('473668077754777602')
@@ -78,54 +137,55 @@ bot.on('message', function (message) {
         message.member.addRole(myRole)
         message.channel.send('welcome to the shadows')
     }
-    if (message.content.includes("nigga")){
+    if (message.content.includes("nigga")) {
         message.delete();
         message.author.send("Please don't use the word \"Nigga\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("Nigga")){
+    if (message.content.includes("Nigga")) {
         message.delete();
         message.author.send("Please don't use the word \"Nigga\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("nigger")){
+    if (message.content.includes("nigger")) {
         message.delete();
         message.author.send("Please don't use the word \"Nigger\", or any slurs. This is just a warning, next time will result in a ban.")
 
     }
-    if (message.content.includes("Nigger")){
+    if (message.content.includes("Nigger")) {
         message.delete();
         message.author.send("Please don't use the word \"Nigger\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("Fag")){
+    if (message.content.includes("Fag")) {
         message.delete();
         message.author.send("Please don't use the word \"Fag\", or any slurs. This is just a warning, next time will result in a ban.")
 
     }
-    if (message.content.includes("fag")){
+    if (message.content.includes("fag")) {
         message.delete();
         message.author.send("Please don't use the word \"Fag\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("faggot")){
+    if (message.content.includes("faggot")) {
         message.delete();
         message.author.send("Please don't use the word \"Faggot\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("Faggot")){
+    if (message.content.includes("Faggot")) {
         message.delete();
         message.author.send("Please don't use the word \"Faggot\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("retard")){
+    if (message.content.includes("retard")) {
         message.delete();
         message.author.send("Please don't use the word \"Retard\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("Retard")){
+    if (message.content.includes("Retard")) {
         message.delete();
         message.author.send("Please don't use the word \"Retard\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("dike")){
+    if (message.content.includes("dike")) {
         message.delete();
         message.author.send("Please don't use the word \"Dike\", or any slurs. This is just a warning, next time will result in a ban.")
     }
-    if (message.content.includes("Dike")){
+    if (message.content.includes("Dike")) {
         message.delete();
         message.author.send("Please don't use the word \"Dike\", or any slurs. This is just a warning, next time will result in a ban.")
     }
+
 })
