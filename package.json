@@ -15,7 +15,6 @@
     "express": "^4.15.5",
     "ffmpeg-binaries": "^4.0.0",
     "lyrics-fetcher": "^1.0.2",
-    "node-opus": "^0.3.1",
     "opusscript": "0.0.6",
     "sequelize": "^4.42.0",
     "sqlite": "^3.0.0",
